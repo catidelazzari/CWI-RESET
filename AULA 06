@@ -1,0 +1,32 @@
+altura = 1.86
+peso = 120
+grauObesidade = 0
+
+imc = peso / (altura * altura)
+
+if (imc < 18.50){
+  grauObesidade = 0
+}
+else if ((imc > 18.50) && (imc < 24.99)) {
+  grauObesidade = 0
+}
+else if ((imc > 25.00) && (imc < 29.99)) {
+  grauObesidade = 1
+}
+else if ((imc > 30.00) && (imc < 39.99)) {
+  grauObesidade	= 2
+}
+else if (imc >= 40.00){
+  grauObesidade = 3
+}
+
+console.log("O imc é: ", imc)
+console.log("O grau de obesidade é: ", grauObesidade)
+
+if (grauObesidade > 0) {
+  console.log("Cuidado! Você está acima do peso recomendado pela OMS.")
+}
+
+if (grauObesidade == 3) {
+  console.log ("É importante procurar um médico para avaliar sua saúde.")
+}
