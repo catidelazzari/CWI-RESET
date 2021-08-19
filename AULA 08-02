@@ -1,0 +1,16 @@
+
+valores = [1, 2, 3, 5, 8, 13, 21, 23, 34, 55]
+
+soma= 0
+num = 0
+while(num <= valores.length -1) {
+
+soma = soma + valores[num]
+
+console.log(soma)
+num++
+}
+
+media = soma / valores.length
+
+console.log("A média é:", media)
