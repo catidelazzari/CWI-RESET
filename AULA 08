@@ -1,0 +1,7 @@
+nomeDeFlores = ["Orquidia", "Margarida", "Rosa", "Girassol", "Tulipa"]
+
+for(valor = 0; valor < nomeDeFlores.length; valor++) {
+
+console.log(nomeDeFlores[valor])
+
+}
