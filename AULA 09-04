@@ -1,0 +1,7 @@
+//CALCULA VALOR DE BOLETO MAIS JUROS
+
+function calcula(valor){
+ return valor +(valor* 0.10)
+
+}
+  console.log(calcula(500))
