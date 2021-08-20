@@ -1,0 +1,13 @@
+
+
+function mesmoNome(nomeDoFulano,nomeDoBeltrano){
+if (nomeDoFulano==nomeDoBeltrano) {
+  console.log ("Nomes iguais")
+
+}
+else { console.log("Nomes diferentes")
+}
+}
+mesmoNome("Catiane","Gilmar")
+mesmoNome("Catiane","Gilmar")
+mesmoNome("Catiane","Catiane")
