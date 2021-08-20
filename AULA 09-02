@@ -1,5 +1,5 @@
 
-
+//ESSA FUNÇÃO É PARA VERIFICAR SE NOME DO FULANO É IGUAL //AO NOME DO FULANO
 function mesmoNome(nomeDoFulano,nomeDoBeltrano){
 if (nomeDoFulano==nomeDoBeltrano) {
   console.log ("Nomes iguais")
