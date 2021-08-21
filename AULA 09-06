@@ -1,0 +1,11 @@
+//VALOR PERCENTUAL
+
+
+function valorPercentual(receitaLiquida, custoProdutos){
+ lucroBruto = receitaLiquida - custoProdutos
+ margemBruta = lucroBruto / receitaLiquida
+ valor = margemBruta * 100
+ return (valor)
+
+  }
+    console.log(valorPercentual(550, 50))
