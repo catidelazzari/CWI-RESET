@@ -1,0 +1,26 @@
+package com.cati.java.aula07;
+
+import java.util.Scanner;
+
+public class OperadoresAritméticos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//exercício3
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Valor da sua hora: ");
+		int valorDaHora = scan.nextInt();
+				
+		System.out.println("Horas trabalhadas no mês: ");
+		int horasTrabalhadas = scan.nextInt();
+		
+		int resultado = (valorDaHora * horasTrabalhadas);
+		
+		System.out.println("Salário total do mês: " + resultado);
+
+	}
+	
+}
