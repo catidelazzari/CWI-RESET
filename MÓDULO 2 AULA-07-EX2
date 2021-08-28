@@ -7,7 +7,7 @@ public class OperadoresAritméticos {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//exercício1
+		//exercício2
 		
 		Scanner scan = new Scanner(System.in);
 		
