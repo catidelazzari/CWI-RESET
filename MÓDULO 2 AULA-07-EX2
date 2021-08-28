@@ -1,0 +1,32 @@
+package com.cati.java.aula07;
+
+import java.util.Scanner;
+
+public class OperadoresAritméticos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//exercício1
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Primeira nota: ");
+		int primeiraNota = scan.nextInt();
+				
+		System.out.println("Segundo nota");
+		int segundaNota = scan.nextInt();
+		
+		System.out.println("Terceira nota");
+		int terceiraNota = scan.nextInt();
+		
+		System.out.println("Quarta nota");
+		int quartaNota = scan.nextInt();
+		
+		int resultado = (primeiraNota + segundaNota + terceiraNota + quartaNota) / 4;
+		
+		System.out.println("Sua média de notas é: " + resultado);
+
+	}
+	
+}
