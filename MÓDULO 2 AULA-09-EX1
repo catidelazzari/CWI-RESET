@@ -1,0 +1,36 @@
+package com.cati.java.aula09;
+
+import java.util.Scanner;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		
+		int min = 0;
+		int max = 10;
+        boolean valido = false;		
+				
+		do {
+			System.out.println("Digite uma nota entre 0-10 ");
+			Scanner scan = new Scanner(System.in);
+			int nota = scan.nextInt();
+			
+			if (nota > min && nota < max) {
+				System.out.println("Valor da nota " + nota);	
+			    valido = true;
+			} 
+			else {
+				System.out.println("Nota inválida");
+			}
+				
+		} while (!valido);
+		
+	}
+}
+
+
+		
+	
+
+
+
