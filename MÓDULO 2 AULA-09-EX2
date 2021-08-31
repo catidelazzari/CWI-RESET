@@ -1,0 +1,28 @@
+package com.cati.java.aula09;
+
+import java.util.Scanner;
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		Scanner leitorTeclado = new Scanner(System.in);
+		
+		System.out.println("Digite o número inicial: ");
+		int numeroInicial = leitorTeclado.nextInt();
+		
+		boolean numeroFinalMaiorInicial = false;
+		int numeroFinal = 0;
+				
+		do {
+			System.out.println("Digite o número final: ");
+			numeroFinal = leitorTeclado.nextInt();
+			
+			if (numeroFinal > numeroInicial) {
+				numeroFinalMaiorInicial = true;
+				
+			}
+		} while (!numeroFinalMaiorInicial);
+		
+		for (int i = numeroInicial; i <= numeroFinal; i++) {
+			System.out.println(i);
+		}
