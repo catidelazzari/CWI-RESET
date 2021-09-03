@@ -1,0 +1,17 @@
+package com.cati.java.modulo3;
+
+public class Exercicio2 {
+
+	
+		    public static void main(String[] args) {
+		        Mario bross = new Mario();
+		        bross.nome = "Mario Bros";
+		        bross.altura = 1.50;
+		        bross.idade = 50;
+
+		        bross.caracteristica();
+		        bross.poderes();
+		    }
+		
+
+	}
