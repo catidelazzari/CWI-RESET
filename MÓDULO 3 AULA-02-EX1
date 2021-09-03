@@ -1,0 +1,36 @@
+package com.cati.java.modulo3;
+
+public class Mario {
+    String nome;
+    double altura;
+    int idade;
+
+    public void caracteristica() {
+    	System.out.println("Seu nome " + this.nome);
+    	System.out.println("Sua altura " + this.altura);
+    	System.out.println("Sua idade " + this.idade);
+    }
+    
+    public void poderes() {
+    	System.out.println("Velocidade, salto, força.");
+    }
+}
+
+
+package com.cati.java.modulo3;
+
+public class Aula2 {
+
+	public static void main(String[] args) {
+		Mario bross = new Mario();
+		bross.altura = 1.50;
+		bross.nome = "Mario";
+		bross.idade = 35;
+		
+		
+		bross.caracteristica();
+
+		bross.poderes();
+	}
+
+}
