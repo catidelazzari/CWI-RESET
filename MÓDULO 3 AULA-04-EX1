@@ -1,0 +1,90 @@
+package Metodos;
+
+public class Mario {
+
+	
+		private String nome;
+	    private double altura;
+	    private int idade;
+	    private int estamina;	
+   
+	    public Mario() { //este é o método construtor
+	    	this.nome = "Mario Bross";
+	    	this.idade  = 40;
+	    	this.altura = 1.50;
+	    	this.estamina = 100;
+	    }
+	    public Mario(String nome, int idade, double altura) { //este é o método construtor
+	    	this.nome = nome;
+	    	this.idade  = idade;
+	    	this.altura = altura;
+	    	this.estamina = 100;	    	
+	    }
+	    	    
+	    public String getNome() {
+	    	return this.nome;
+	    }
+	    public void setNome(String n) {
+	    	this.nome = n;
+	    }
+	    public double getAltura() {
+	    	return this.altura;
+	    }
+	    public void setAltura(double a) {
+	    	this.altura = a;
+	    }
+	    public int getIdade() {
+	    	return this.idade;
+	    }
+	    public void setIdade(int i) {
+	    	this.idade = i;
+	    }
+	    public int getEstamina() {
+	    	return this.estamina;
+	    }
+	    public void setEstamina(int e) {
+	    	this.estamina = e;
+	    }
+	    	    
+	    public void caracteristica() {
+	    	System.out.println("Seu nome " + this.getNome());
+	    	System.out.println("Sua altura " + this.getAltura());
+	    	System.out.println("Sua idade " + this.getIdade());
+	    	System.out.println("Estamina " + this.getEstamina());
+	    }
+	    
+	    public void poderes() {
+	    	System.out.println("Velocidade, salto, força.");
+	    }
+	}
+
+
+package Metodos;
+
+import com.cati.java.modulo3.Mario03;
+
+public class exercicioAula4 {
+
+	public static void main(String[] args) {
+		Mario bross = new Mario();
+		bross.setAltura(1.40);
+		bross.setNome("Mario Bross");
+		bross.setIdade(30);
+		bross.setEstamina(100);
+		bross.caracteristica();
+		bross.poderes();
+		System.out.println();
+		
+		Mario Bross1 = new Mario("Mario Bross", 50, 1.60);
+		Bross1.caracteristica();
+		System.out.println();
+		
+		Mario Bross2 = new Mario();
+		Bross2.caracteristica();
+	}
+
+	}
+
+
+
+
