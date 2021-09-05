@@ -1,0 +1,116 @@
+package com.cati.java.aula05;
+
+public class marioEx01 {
+
+			private String nome;
+		    private double altura;
+		    private int idade;
+		    private int estamina;	
+		    public int crescer;
+	   
+		    public marioEx01() { //este é o método construtor
+		    	this.nome = "Mario Bross";
+		    	this.idade  = 40;
+		    	this.altura = 1.50;
+		    	this.estamina = 100;
+		    }
+		    			    
+		    public int getEstamina() {
+		    	return this.estamina;
+		    }
+		    public void setEstamina(int e) {
+		    	this.estamina = e;
+		    }
+		   
+		    	    
+		    public void caracteristica() {
+		    	System.out.println("Estamina " + this.estamina);
+		    	System.out.println("Altura " + this.altura);
+		    }
+		    
+		
+		    public void diminuirEstamina(){
+		        this.estamina = this.estamina - 10;
+		        if (this.estamina < 0) {
+		            this.estamina = 0;
+		        }
+		  
+		    }
+		    
+		    public void aumentarEstamina(){
+		        this.estamina = this.estamina + 5;
+		        if (this.estamina > 100) {
+		            this.estamina = 100;
+		        }
+		    }
+		    public void marioCrescer(){
+		        this.altura = this.altura * 2;
+		     
+		        
+		    } 
+	 }
+		    
+	package com.cati.java.aula05;
+
+import com.cati.java.modulo3.Mario03;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		marioEx01 bross = new marioEx01();
+		bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.caracteristica();
+	    bross.aumentarEstamina();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.diminuirEstamina();
+	    bross.caracteristica();
+	    bross.marioCrescer();
+	    bross.caracteristica();
+	}
+
+}
+
+
+	    	 
+       
+		
+
+
