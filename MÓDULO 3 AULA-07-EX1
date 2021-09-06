@@ -1,0 +1,112 @@
+package com.cati.java.modulo3;
+
+public class Personagem {
+
+		private String nome;
+	    private double altura;
+	    private int idade;
+	    private int estamina;	
+	    public int crescer;
+	    public int moeda;
+	    public int vida;
+	    
+	    
+	    public Personagem(String nome, int idade, double altura) {
+	    	this.nome = nome;
+	    	this.idade  = idade;
+	    	this.altura = altura;
+	    	this.estamina = 100;
+	    	this.moeda = 0;
+	    	this.vida = 1;
+	    	
+	    }
+	    
+	    public void caracteristica() {
+	    	System.out.println("Estamina " + this.estamina);
+	    	System.out.println("Altura " + this.altura);
+	    	System.out.println("Vida " + this.vida);
+	    	System.out.println("Moeda " + this.moeda);
+	    }
+	    			    
+	    public int estamina() {
+	    	return this.estamina;
+	    }
+    
+	     
+	
+	    public void diminuirEstamina() {
+	        this.estamina = this.estamina - 10;
+	        if (this.estamina < 0) {
+	            this.estamina = 0;
+	        }
+	  
+	    }
+	    
+	    public void aumentarEstamina() {
+	        this.estamina = this.estamina + 5;
+	        if (this.estamina > 100) {
+	            this.estamina = 100;
+	        }
+	    }
+	    public void marioCrescer() {
+	        this.altura = this.altura * 2;
+	    }
+	    
+	    public void marioRevigorar() {
+	    	this.estamina = 100;
+	    }
+	    
+	    public void marioMorrer() {
+	    	this.estamina = 0;
+	    	this.vida = this.vida - 1;
+	    	if (this.vida < 0) {
+	    		this.vida = 0;
+	    	}
+	    	
+	    	if (this.vida >= 0) {
+	    		this.marioRevigorar();
+	    	}
+	    }
+	    
+	    public void coletarMoeda() {
+	    	this.moeda = this.moeda + 1;
+	    	if (this.moeda == 10) {
+	    		this.vida = this.vida + 1;
+	    	}
+	  
+	    }
+	    public void alturaSalto() {
+	        if (this.nome.equals("Mario"))
+	            System.out.println("Altura do pulo " + this.altura * 0.5);
+	        if (this.nome.equals("Luigi"))
+	            System.out.println("Altura do pulo " + + this.altura * 2);
+		    	
+		  
+		   }
+}
+
+package com.cati.java.modulo3;
+
+public class executarSalto {
+
+	public static void main(String[] args) {
+	    System.out.println("Altura do salto do Mario");
+        Personagem personagem = new Personagem("Mario", 60, 1.50);
+        personagem.caracteristica();
+        personagem.alturaSalto();
+        System.out.println("---");
+
+        System.out.println("Teste para verificar a altura do salto do Luigi");
+        Personagem luigi = new Personagem("Luigi", 50, 1.70);
+        luigi.caracteristica();
+        luigi.alturaSalto();
+        System.out.println("---");
+    }
+
+		
+
+}
+
+
+
+
