@@ -94,18 +94,20 @@ public class executarSalto {
         Personagem personagem = new Personagem("Mario", 60, 1.50);
         personagem.caracteristica();
         personagem.alturaSalto();
-        System.out.println("---");
+      
 
         System.out.println("Teste para verificar a altura do salto do Luigi");
         Personagem luigi = new Personagem("Luigi", 50, 1.70);
         luigi.caracteristica();
         luigi.alturaSalto();
-        System.out.println("---");
+       
     }
 
-		
 
 }
+
+
+
 
 
 
