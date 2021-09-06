@@ -1,0 +1,139 @@
+package com.cati.java.modulo3;
+
+public class Personagem {
+
+		private String nome;
+	    private double altura;
+	    private int idade;
+	    private int estamina;
+	    public int moeda;
+	    public int vida;
+	    
+	    
+	    public Personagem(String nome, int idade, double altura) {
+	    	this.nome = nome;
+	    	this.idade  = idade;
+	    	this.altura = altura;
+	    	this.estamina = 100;
+	    	this.moeda = 0;
+	    	this.vida = 1;
+	    	
+	    }
+	    
+	    public void caracteristica() {
+	    	System.out.println("Nome " + this.nome);
+	    	System.out.println("Estamina " + this.estamina);
+	    	System.out.println("Altura " + this.altura);
+	    	System.out.println("Vida " + this.vida);
+	    	System.out.println("Moeda " + this.moeda);
+	    }
+	    			    
+	    public int estamina() {
+	    	return this.estamina;
+	    }
+    
+	     
+	
+	    public void diminuirEstamina() {
+	        this.estamina = this.estamina - 10;
+	        if (this.estamina < 0) {
+	            this.estamina = 0;
+	        }
+	  
+	    }
+	    
+	    public void aumentarEstamina() {
+	        this.estamina = this.estamina + 5;
+	        if (this.estamina > 100) {
+	            this.estamina = 100;
+	        }
+	    }
+	    public void marioCrescer() {
+	        this.altura = this.altura * 2;
+	    }
+	    
+	    public void marioRevigorar() {
+	    	this.estamina = 100;
+	    }
+	    
+	    public void marioMorrer() {
+	    	this.estamina = 0;
+	    	this.vida = this.vida - 1;
+	    	if (this.vida < 0) {
+	    		this.vida = 0;
+	    	}
+	    	
+	    	if (this.vida >= 0) {
+	    		this.marioRevigorar();
+	    	}
+	    }
+	    
+	    public void coletarMoedas() {
+	    	this.moeda = this.moeda + 1;
+	    	if (this.moeda == 10) {
+	    		this.vida = this.vida + 1;
+	    	}
+	  
+	    }
+	    public void alturaSalto() {
+	        if (this.nome.equals("Mario"))
+	            System.out.println("Altura do pulo " + this.altura * 0.5);
+	        if (this.nome.equals("Luigi"))
+	            System.out.println("Altura do pulo " + + this.altura * 2);
+		    	
+		  
+		   }
+}
+
+package com.cati.java.modulo3;
+
+import java.util.Random;
+
+public class Jogo {
+
+		private Personagem jogador1;
+		private Personagem jogador2;
+		
+		public Jogo(Personagem jogador1, Personagem jogador2) {
+		this.jogador1 = jogador1;
+		this.jogador2 = jogador2;
+		
+	    }
+		 public void dadosPersonagem() {
+		    	System.out.println("Jogador1 " + this.jogador1);
+		    	System.out.println("Jogador2 " + this.jogador2);
+		    	
+		 }
+		public void jogar() {
+			Random aleatorio = new Random();
+			int coletarMoedasJogador1 = aleatorio.nextInt(30);
+			for (int i = 0; i < coletarMoedasJogador1; i++) {
+				jogador1.coletarMoedas();
+			}
+			int coletarMoedasJogador2 = aleatorio.nextInt(30);
+			for (int i = 0; i < coletarMoedasJogador2; i++) {
+				jogador2.coletarMoedas();
+			}
+			
+			jogador1.caracteristica();
+			jogador2.caracteristica();
+
+		}
+		    	
+}
+
+package com.cati.java.modulo3;
+
+public class marioJogar {
+
+	public static void main(String[] args) {
+        Personagem mario = new Personagem("Mario", 60, 1.50);
+        Personagem luigi = new Personagem("Luigi", 50, 1.70);
+        Jogo jogo = new Jogo(mario, luigi); 
+        jogo.jogar();
+	}
+
+}
+
+
+
