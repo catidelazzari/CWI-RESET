@@ -1,0 +1,181 @@
+package com.cati.java.modulo3Heranca;
+
+public abstract class Personagem {
+    private String nome;
+    private double altura;
+    private int idade;
+    private int estamina;
+    private int quantidadeMoedas;
+    private int quantidadeVidas;
+
+    public Personagem(String nome, int idade, double altura) {
+        this.nome = nome;
+        this.altura = altura;
+        this.idade = idade;
+        this.estamina = 100;
+        this.quantidadeMoedas = 0;
+        this.quantidadeVidas = 1;
+    }
+
+    public void revigorar() {
+        this.estamina = 100;
+    }
+
+    public void morrer() {
+        this.quantidadeVidas--;
+        this.estamina = 0;
+
+        if (this.quantidadeVidas < 0) {
+            quantidadeVidas = 0;
+        } else {
+            revigorar();
+        }
+    }
+
+    public void coletarMoeda() {
+        this.quantidadeMoedas++;
+
+        if (this.quantidadeMoedas % 10 == 0) {
+            this.quantidadeVidas++;
+        }
+    }
+
+    public void imprimePoderes() {
+        System.out.println("Super força, Super salto, super velocidade e outros.");
+    }
+
+    public void imprimeCaracteristicas(){
+        System.out.println("Personagem{" +
+                "nome='" + nome + '\'' +
+                ", altura=" + altura +
+                ", idade=" + idade +
+                ", estamina=" + estamina +
+                ", quantidadeMoedas=" + quantidadeMoedas +
+                ", quantidadeVidas=" + quantidadeVidas +
+                '}');
+    }
+
+    public void perderEstamina(){
+        this.estamina = this.estamina - 10;
+        if (this.estamina < 0) {
+            this.estamina = 0;
+        }
+    }
+
+    public void ganharEstamina(){
+        this.estamina = this.estamina + 5;
+        if (this.estamina > 100) {
+            this.estamina = 100;
+        }
+    }
+
+    public void crescer() {
+        this.altura = this.altura * 2;
+    }
+
+    public void saltar() {
+        if (this.nome.equals("Mario"))
+            System.out.println("Pulando uma altura de " + this.altura * 0.5);
+        if (this.nome.equals("Luigi"))
+            System.out.println("Pulando uma altura de " + + this.altura * 2);
+    }
+}
+
+package com.cati.java.modulo3Heranca;
+
+public class Mario extends Personagem {
+    private Yoshi montar;
+    
+    public Mario(String nome, int idade, double altura) {
+    	super(nome, idade, altura);
+   
+    }
+    
+    public void montarNoYoshi(Yoshi montar) {
+    	this.montar = montar;
+    }
+    
+    public void imprimeSeMarioMontado() {
+    	if (montar != null) {
+    		System.out.println("Mario está montado no Yoshi ");
+    	}
+   
+   
+    }
+}
+	
+
+
+package com.cati.java.modulo3Heranca;
+
+public class Luigi extends Personagem {
+	String nome;
+    double altura;
+    int idade;
+    
+    public Luigi(String nome, int idade, double altura) {
+    	super(nome, idade, altura);
+   
+    }
+    public void voar() {
+    	System.out.println("Luigi está voando ");
+	}
+
+}
+
+
+package com.cati.java.modulo3Heranca;
+	
+	public class Yoshi extends Personagem {
+	   private int quantidadeFruta;
+	   private int velocidade;
+	    
+	    public Yoshi(String nome, int idade, double altura) {
+	    	super(nome, idade, altura);
+	    	 this.quantidadeFruta = 0;
+	 	     this.velocidade = 10;
+	   
+	    }
+	    
+	    public int getVelocidade() {
+	    	return this.velocidade;
+	    }
+	   
+	    public void comerFruta() {
+	    	this.quantidadeFruta = this.quantidadeFruta + 1;
+	    	if (this.quantidadeFruta % 2 == 0)  {
+	    		this.velocidade = this.velocidade * 2;
+	    	}
+	    }
+	   
+	}
+
+
+package com.cati.java.modulo3Heranca;
+
+public class Testar {
+
+	public static void main(String[] args) {
+		Mario mario= new Mario("Mario", 60, 1.50);
+		Yoshi yoshi = new Yoshi("Yoshi", 55, 0.90);
+		Luigi luigi = new Luigi("Luigi", 40, 1.60);
+		mario.imprimeSeMarioMontado();
+		mario.montarNoYoshi(yoshi);
+		mario.imprimeSeMarioMontado();
+		yoshi.imprimeCaracteristicas();
+		mario.imprimeCaracteristicas();
+		luigi.imprimeCaracteristicas();
+		luigi.voar();
+		System.out.println("Velocidade " + yoshi.getVelocidade());
+		yoshi.comerFruta();
+		System.out.println("Velocidade " + yoshi.getVelocidade());
+		yoshi.comerFruta();
+		yoshi.comerFruta();
+		yoshi.comerFruta();
+		System.out.println("Velocidade " + yoshi.getVelocidade());
+		
+		
+	
+	}
+
+}
